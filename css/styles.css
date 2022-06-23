@@ -240,7 +240,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #15967d;
+  color: #ff1111;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -11315,6 +11315,14 @@ html {
 }
 .wow .divider-custom {
   justify-content: left;
+}
+.wow .divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 20rem;
+  height: 0.25rem;
+  background-color: #fefefe;
+  border-radius: 1rem;
+  border-color: #fefefe;
 }
 .masthead {
     --bs-bg-opacity: 1;
