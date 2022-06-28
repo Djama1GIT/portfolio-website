@@ -11318,16 +11318,33 @@ html {
 }
 .wow .divider-custom .divider-custom-line {
   width: 100%;
-  max-width: 20rem;
+  max-width: 10rem;
   height: 0.25rem;
   background-color: #fefefe;
   border-radius: 1rem;
   border-color: #fefefe;
 }
+@media (min-width: 992px) {
+  .wow .divider-custom .divider-custom-line {
+    width: 100%;
+    max-width: 20rem;
+    height: 0.25rem;
+    background-color: #fefefe;
+    border-radius: 1rem;
+    border-color: #fefefe;
+  }
+}
 .masthead {
     --bs-bg-opacity: 1;
-    background: url(../assets/img/avatar.png) no-repeat;
-    background-position: center;
+    background: url(../assets/img/avatar-mini.png) no-repeat;
+    background-position: top center;  
+}
+@media (min-width: 992px) {
+    .masthead {
+      --bs-bg-opacity: 1;
+      background: url(../assets/img/avatar.png) no-repeat;
+      background-position: center;    
+  }
 }
 .divider-custom .divider-custom-line {
   width: 100%;
@@ -11481,20 +11498,10 @@ html {
   max-width: 25rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  transition: 0.4s;
 }
-.portfolio .portfolio-item .portfolio-item-caption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
-}
-.portfolio .portfolio-item .portfolio-item-caption:hover {
-  opacity: 1;
-}
-.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
-  font-size: 1.5rem;
+.portfolio .portfolio-item:hover {
+  transform: scale(1.03)
 }
 
 .portfolio-modal .btn-close {
