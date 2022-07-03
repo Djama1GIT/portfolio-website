@@ -22,7 +22,7 @@ def main():
         sender = request.form.get('email') or ""
         body = request.form.get('message') or ""
         send_message(sender + ", " + full_name + ": " + phone, sender=sender, recipients=recipients, body=body)
-        return redirect(request.url)
+        return redirect('/')
     return render_template('index.html')
 
 
