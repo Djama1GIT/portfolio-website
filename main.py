@@ -32,4 +32,4 @@ def send_message(subject, sender, recipients, body):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=80)
