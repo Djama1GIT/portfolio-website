@@ -7,9 +7,9 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'mail'
-app.config['MAIL_DEFAULT_SENDER'] = 'mail'
-app.config['MAIL_PASSWORD'] = 'passwd'
+app.config['MAIL_USERNAME'] = 'vsjxgxxy@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = 'vsjxgxxy@gmail.com'
+app.config['MAIL_PASSWORD'] = 'eiiszzsfbstdrndp'
 mail = Mail(app)
 
 
@@ -18,7 +18,7 @@ def main():
     if request.method == 'POST':
         full_name = request.form.get('name') or ""
         phone = request.form.get('phone') or ""
-        recipients = "mail"
+        recipients = "vsjxgxxy@gmail.com"
         sender = request.form.get('email') or ""
         body = request.form.get('message') or ""
         send_message(sender + ", " + full_name + ": " + phone, sender=sender, recipients=recipients, body=body)
