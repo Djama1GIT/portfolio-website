@@ -1,15 +1,15 @@
 from flask import Flask, render_template, request, redirect
 from flask_mail import Mail, Message
 
-app = Flask(__name__)
-app.debug = True
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app = Flask(__name__, template_folder='Templates')
+app.debug = False
+app.config['MAIL_SERVER'] = 'smtp.mail.ru'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'vsjxgxxy@gmail.com'
-app.config['MAIL_DEFAULT_SENDER'] = 'vsjxgxxy@gmail.com'
-app.config['MAIL_PASSWORD'] = 'eiiszzsfbstdrndp'
+app.config['MAIL_USERNAME'] = 'prtfl@dj.ama1.ru'
+app.config['MAIL_DEFAULT_SENDER'] = 'prtfl@dj.ama1.ru'
+app.config['MAIL_PASSWORD'] = ''
 mail = Mail(app)
 
 
@@ -18,10 +18,10 @@ def main():
     if request.method == 'POST':
         full_name = request.form.get('name') or ""
         phone = request.form.get('phone') or ""
-        recipients = "vsjxgxxy@gmail.com"
-        sender = request.form.get('email') or ""
+        sender = "prtfl@dj.ama1.ru"
+        recipients = sender
         body = request.form.get('message') or ""
-        send_message(sender + ", " + full_name + ": " + phone, sender=sender, recipients=recipients, body=body)
+        send_message(request.form.get('email') or "" + ", " + full_name + ": " + phone, sender=sender, recipients=recipients, body=body)
         return redirect('/')
     return render_template('index.html')
 
@@ -32,4 +32,4 @@ def send_message(subject, sender, recipients, body):
 
 
 if __name__ == '__main__':
-    app.run(port=80)
+    app.run(host='0.0.0.0', port=80)
