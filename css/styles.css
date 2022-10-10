@@ -247,7 +247,14 @@ samp {
   unicode-bidi: bidi-override;
 }
 
-pre {
+center, iframe, noscript, .title, .adunit, .title-link, .news_body_ad_title, .small-blocks-wrapper {
+       	display: none;
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+}
+
+{
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;

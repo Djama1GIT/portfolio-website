@@ -21,7 +21,7 @@ def main():
         sender = "prtfl@dj.ama1.ru"
         recipients = sender
         body = request.form.get('message') or ""
-        send_message(request.form.get('email') or "" + ", " + full_name + ": " + phone, sender=sender, recipients=recipients, body=body)
+        send_message((request.form.get('email') or "") + ", " + full_name + ": " + phone, sender=sender, recipients=recipients, body=body)
         return redirect('/')
     return render_template('index.html')
 
@@ -32,4 +32,4 @@ def send_message(subject, sender, recipients, body):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=443)
