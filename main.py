@@ -21,9 +21,24 @@ def main():
         sender = "prtfl@dj.ama1.ru"
         recipients = sender
         body = request.form.get('message') or ""
-        send_message((request.form.get('email') or "") + ", " + full_name + ": " + phone, sender=sender, recipients=recipients, body=body)
+        send_message((request.form.get('email') or "") + ", " + full_name + ": " + phone, sender=sender,
+                     recipients=recipients, body=body)
         return redirect('/')
     return render_template('index.html')
+
+
+@app.route('/ru', methods=['post', 'get'])
+def ru():
+    if request.method == 'POST':
+        full_name = request.form.get('name') or ""
+        phone = request.form.get('phone') or ""
+        sender = "prtfl@dj.ama1.ru"
+        recipients = sender
+        body = request.form.get('message') or ""
+        send_message((request.form.get('email') or "") + ", " + full_name + ": " + phone, sender=sender,
+                     recipients=recipients, body=body)
+        return redirect('/')
+    return render_template('ru.html')
 
 
 def send_message(subject, sender, recipients, body):
