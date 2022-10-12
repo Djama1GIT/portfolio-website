@@ -41,6 +41,11 @@ def ru():
     return render_template('ru.html')
 
 
+@app.route('/sitemap.xml', methods=['post', 'get'])
+def sitemap():
+    return render_template('sitemap.xml')
+
+
 def send_message(subject, sender, recipients, body):
     msg = Message(subject, sender=sender, recipients=[recipients], body=body)
     mail.send(msg)
