@@ -6,7 +6,6 @@ app = Flask(__name__, template_folder='Templates')
 
 @app.route('/', methods=['post', 'get'])
 def main():
-    render_template('index.html')
     return redirect(request.url.replace('http://', 'https://', 1))
 
 
