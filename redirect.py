@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, redirect
-from flask_mail import Mail, Message
+from flask import Flask, request, redirect
 
 app = Flask(__name__, template_folder='Templates')
 
