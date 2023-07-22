@@ -10,8 +10,7 @@ Portfolio Website is a project based on Flask.
 
 ```bash
 git clone https://github.com/Djama1GIT/portfolio-website.git
-cd myflaskapp
-git checkout with_flask
+cd portfolio-website
 ```
 
 3. Create and activate a virtual environment (optional but recommended):
