@@ -35,15 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 particlesJS.load('particles-js', 'static/assets/particles.json', function() {
   console.log('callback - particles.js config loaded');
 });
+
 function toggleCard(card) {
   card.classList.toggle('flipped');
-}
-function flipCard(card) {
-  card.classList.add('flipped');
-}
-function unflipCard(card) {
-  card.classList.remove('flipped');
 }

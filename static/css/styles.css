@@ -41,19 +41,25 @@ a:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 .a-header {
+    display: inline-flex;
     position: absolute;
-    top: 0.8vw;
-    left: 2dvh;
+    top: 1.8vh;
+    left: 1.2vw;
+}
+.toggle-lang {
+    margin-top: 1em;
+    margin-left: -0.8em;
+    font-size: 15px;
 }
 .a-cv {
     position: absolute;
-    top: 0.8vw;
-    right: 27dvh;
+    top: 1.8vh;
+    right: 9em;
 }
 .a-footer {
     position: absolute;
-    top: 0.8vw;
-    right: 4dvh;
+    top: 1.8vh;
+    right: 1em;
 }
 .gadjiiavov {
     display: flex;
@@ -61,7 +67,7 @@ a:hover {
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 35vw;
+    height: 90vh;
 }
 .particles-js-canvas-el {
     position: fixed;
@@ -97,6 +103,68 @@ a:hover {
 .bold {
     font-weight: bold;
 }
+.skills-ticker {
+    position: absolute;
+    top: 8em;
+    overflow: hidden;
+    transform: rotateZ(-2deg);
+}
+.skills-ticker2 {
+    position: absolute;
+    bottom: 2em;
+    overflow: hidden;
+    transform: rotateZ(-2deg);
+}
+.skills-ticker__wrapper {
+    display: flex;
+}
+.skills-ticker__item {
+    width: 6em;
+    font-size: 2vw;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+    animation: ticker 35s linear infinite;
+}
+.skills-ticker2 .skills-ticker__item {
+    animation: ticker2 35s linear infinite;
+}
+@keyframes ticker {
+    0% {
+        transform: translate3d(1500%, 0, 0); /* 1500 - (-400) = 1900% -> 19 elements in ticker * 100% */
+    }
+    to {
+        transform: translate3d(-400%, 0, 0);
+    }
+}
+@keyframes ticker2 {
+    0% {
+        transform: translate3d(-400%, 0, 0);
+    }
+    to {
+        transform: translate3d(1500%, 0, 0);
+    }
+}
+.skills {
+    display: none;
+    justify-content: center;
+}
+.skills__wrapper {
+    display: grid;
+    max-width: 60%;
+}
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skill {
+    background: var(--primary-color);
+    border-radius: 15px;
+    margin: 5px 10px;
+    color: var(--main-color);
+    padding: 0.3em;
+}
 .cv {
     display: flex;
     background-color: var(--primary-bg-color);
@@ -131,7 +199,7 @@ h2 {
     font-size: 2vw;
 }
 .about {
-    font-size: 1.5vw;
+    font-size: 3vh;
     justify-content: center;
     padding: 0 10em;
     flex-wrap: wrap;
@@ -263,21 +331,30 @@ h2 {
     padding: 8vh 0;
     z-index: 1;
 }
-.vk img {
-    width: 1.8em;
-    filter: invert(100%);
+.vk img,
+.tg img,
+.gh img {
+    width: 4em;
+    border-radius: 50%;
+    background-color: var(--a-color);
+    border: 3px dashed var(--a-color);
+    filter: invert(7%);
 }
 .tg img,
 .gh img {
-    width: 1.3em;
-    filter: invert(100%);
+    margin-left: 0.8em;
 }
-.gh {
-    margin-left: 0.3em;
+.vk:hover img,
+.tg:hover img,
+.gh:hover img {
+    filter: invert(100%);
 }
 @media (max-width: 1400px) {
     #header {
         display: none;
+    }
+    .skills {
+        display: flex;
     }
     .some-about {
         padding-top: 2em;
@@ -292,13 +369,14 @@ h2 {
         margin-left: auto;
         margin-right: auto;
         width: 100vw;
-        height: 60vh;
+        height: 100%;
         justify-content: center;
         text-align: center;
         align-items: center;
     }
     .me img {
         width: 40vw;
+        max-width: 50vh;
     }
     #cv {
         font-size: 8vw;
@@ -324,7 +402,7 @@ h2 {
         font-size: 3.5em;
     }
     .about {
-        font-size: 16px;
+        font-size: 2vh;
         justify-content: center;
         flex-wrap: wrap;
         padding: 0 5em;
@@ -342,8 +420,17 @@ h2 {
     .location {
         margin-top: 4em;
     }
+    .skills-ticker,
+    .skills-ticker2 {
+        display: none;
+    }
 }
 @media (max-width: 1080px) {
+
+    .skills__wrapper {
+        display: grid;
+        max-width: 95%;
+    }
     .some-about {
         padding-top: 1em;
         margin: unset;
@@ -356,8 +443,8 @@ h2 {
         width: 60vw;
     }
     .about {
+        font-size: 2vh;
         padding: 0 0.5em;
-        font-size: 14px;
     }
     .hi,
     .name {
@@ -365,5 +452,37 @@ h2 {
     }
     .whoami {
         font-size: 3vw;
+    }
+}
+@media (max-width: 1920px) {
+    .gadjiiavov {
+        height: 80vh;
+    }
+}
+@media (max-height: 1080px) {
+    .gadjiiavov {
+        margin-top: 4em;
+    }
+}
+@media (max-height: 800px) {
+    .skills-ticker,
+    .skills-ticker2 {
+        display: none;
+    }
+    .skills {
+        display: flex;
+    }
+    .about {
+        font-size: 5vh;
+    }
+    .but-not .proj-name {
+        font-size: 1em;
+        top: 5%;
+        left: 14.5%;
+    }
+}
+@media (max-width: 500px) {
+    .about {
+        font-size: 4vw;
     }
 }
