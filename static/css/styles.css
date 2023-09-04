@@ -434,6 +434,13 @@ h2 {
     .skills-ticker2 {
         display: none;
     }
+
+    .but-not.flipped h1 {
+        font-size: 2em;
+    }
+    .but-not.flipped h6 {
+        font-size: 0.7em;
+    }
 }
 @media (max-width: 1080px) {
 
