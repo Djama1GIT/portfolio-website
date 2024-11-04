@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Head.module.css';
+import styles from './Content.module.css';
+
+import About from './content/About';
+import Skills from './content/Skills';
+import Education from './content/Education';
 
 /**
  * The content body component. This component is used to display the content block.
@@ -10,7 +14,16 @@ import styles from './Head.module.css';
 function Content() {
 
   return (
+    <div class="cv">
+      <div class="over">
+        <span id="cv">CV</span>
 
+        <About />
+        <Skills />
+        <Education />
+
+      </div>
+    </div>
   );
 }
 

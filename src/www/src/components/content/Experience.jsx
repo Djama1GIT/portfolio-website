@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Head.module.css';
+import styles from './Experience.module.css';
 
 /**
  * The experience component. This component is used to display the experience block.
