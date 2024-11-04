@@ -1,6 +1,6 @@
-# Portfolio Website
+# Personal Website
 
-Portfolio Website is a project based on Flask.
+Personal Website based on React.
 
 ## Installation and Setup
 
@@ -9,38 +9,24 @@ Portfolio Website is a project based on Flask.
 2. Clone the project repository:
 
 ```bash
-git clone https://github.com/Djama1GIT/portfolio-website.git
-cd portfolio-website
+git clone https://github.com/Djama1GIT/personal-website.git
+cd personal-website
 ```
 
-3. Create and activate a virtual environment (optional but recommended):
+3. Start the project:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-4. Install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-5. Start the project:
-
-```bash
-python main.py
+docker-compose up --build
 ```
 
 ## User Interface
 
-After starting the project, you can access the user interface at: http://localhost:8080
+After starting the project, you can access the user interface at: http://localhost:3456
 
 ## Technologies Used
 
-- Python - The programming language used for the project.
-- Flask - The Python web framework used in the project to build the application.
+- React - The library for web and native user interfaces. 
+- JavaScript - The programming language used for adding interactivity to the web pages. 
 - HTML - The markup language used for creating the structure of web pages.
 - CSS - The stylesheet language used for styling the web pages.
-- JavaScript - The programming language used for adding interactivity to the web pages.
-
+- Docker - The platform used in the project for creating, deploying, and managing containers, allowing the application to run in an isolated environment.
