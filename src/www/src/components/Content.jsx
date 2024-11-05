@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styles from './Content.module.css';
 
@@ -13,11 +14,12 @@ import Education from './content/Education';
  * @returns {JSX.Element} The JSX element representing the content body component.
  */
 function Content() {
+  const { t, i18n } = useTranslation();
 
   return (
     <div className={styles.cv}>
       <div className={styles.over}>
-        <span id="cv" className={styles["cv-title"]}>CV</span>
+        <span id="cv" className={styles["cv-title"]}>{t('content.title')}</span>
 
         <About />
         <Skills />

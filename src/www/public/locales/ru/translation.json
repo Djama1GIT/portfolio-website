@@ -1,0 +1,76 @@
+{
+  "about": {
+    "title": "Обо мне",
+    "text": "Понял, что хочу быть программистом еще в возрасте 12 лет, и думаю, это — любовь на всю жизнь!) С горящими глазами смотрю на Python back-end, но также всегда готов позаниматься чем-нибудь смежным или изучить что-то новое.\n\nБуду рад любым знакомствам!"
+  },
+  "education": {
+    "title": "Образование",
+    "start": "2021",
+    "end": "2025",
+    "shortName": "МТУСИ",
+    "universityName": "Московский технический университет связи и информатики",
+    "faculty": "Факультет «Информационные Технологии»",
+    "major": "Специальность «Информатика и вычислительная техника» (09.03.01)",
+    "specialization": "Специализация «Прикладные Информационные Системы»"
+  },
+  "experience": {
+    "title": "Опыт работы",
+    "companies": [
+      {
+        "name": "ООО «АВМ-Энерго» (Автоматизация и мониторинг в энергетике)",
+        "link": "https://www.avmenergo.ru/",
+        "image": "/img/station.png",
+        "period": "06.2024 — 10.2024",
+        "tasksTitle": "Задачи",
+        "tasks": [
+          "Разработка конфигуратора энергетического оборудования",
+          "Обеспечение оптимизации нагрузки на оборудование",
+          "Поддержка продукта, багофикс, рефакторинг",
+          "Написание технической документации"
+        ],
+        "technologiesTitle": "Использованные технологии",
+        "technologies": [
+          "Python/FastAPI для back-енда",
+          "lxml, zipfile для хранения конфигурации",
+          "JS/React для front-енда"
+        ],
+        "achievementsTitle": "Достижения",
+        "achievements": [
+          "Написал автоматический билд приложения при помощи GitHub Actions workflows и Docker (для различных ОС и архитектур)"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Навыки",
+    "imageSrc": "/img/arm.png",
+    "skillsList": [
+      "Python, Java, Go",
+      "HTML, CSS, JavaScript, React",
+      "SQL, PostgreSQL, Redis",
+      "FastAPI, Django, Flask, REST",
+      "И другие: Selenium, Aiogram3, Zustand, Celery, Docker, Linux, Git, ReGex .."
+    ]
+  },
+  "welcome": {
+    "hi": "Привет!",
+    "name": "Я Джамал Гаджиявов",
+    "whoami": "Back-end Разработчик"
+  },
+  "content": {
+    "title": "CV"
+  },
+  "footer": {
+    "location": {
+      "title": "Местонахождение",
+      "address": "Россия, Москва"
+    },
+    "aroundTheWeb": {
+      "title": "Социальные сети"
+    },
+    "email": {
+      "title": "Почта",
+      "address": "gadjiiavov@dj.ama1.ru"
+    }
+  }
+}

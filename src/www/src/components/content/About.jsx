@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styles from './About.module.css';
 
@@ -8,21 +9,14 @@ import styles from './About.module.css';
  * @returns {JSX.Element} The JSX element representing the about component.
  */
 function About() {
+  const { t, i18n } = useTranslation();
 
   return (
     <div id="about" className={styles["about-container"]}>
-      <p className={styles.title}>About me</p>
+      <p className={styles.title}>{t('about.title')}</p>
       <img src="/img/man.png" alt="" />
       <div className={styles.about}>
-        I realized I wanted to be a programmer at the age of 12,
-        and I think this is a lifelong passion! With burning eyes,
-        I gaze at Python back-end,
-        but I'm also always ready to engage in something related
-        or learn something new,
-        because deep inside I feel like a true engineer!
-        <br />
-        <br />
-        I'd be happy about any acquaintances!
+        {t('about.text')}
       </div>
     </div>
   );

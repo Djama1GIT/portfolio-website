@@ -1,0 +1,76 @@
+{
+  "about": {
+    "title": "About me",
+    "text": "I realized I wanted to be a programmer at the age of 12, and I think this is a lifelong passion! With burning eyes, I gaze at Python back-end, but I'm also always ready to engage in something relate or learn something new, because deep inside I feel like a true engineer!\n\nI'd be happy about any acquaintances!"
+  },
+  "education": {
+    "title": "Education",
+    "start": "2021",
+    "end": "2025",
+    "shortName": "MTUCI",
+    "universityName": "Moscow Technical University of Communications and Informatics",
+    "faculty": "Faculty of Information Technology",
+    "major": "Major in Informatics and Computer Engineering",
+    "specialization": "Specialization in Applied Information Systems"
+  },
+  "experience": {
+    "title": "Experience",
+    "companies": [
+      {
+        "name": "AVM-Energo LLC (Automation and monitoring in the energy sector)",
+        "link": "https://www.avmenergo.ru/",
+        "image": "/img/station.png",
+        "period": "06.2024 — 10.2024",
+        "tasksTitle": "Tasks",
+        "tasks": [
+          "Development of a power equipment configurator",
+          "Ensuring hardware load optimization",
+          "Product support, bug fixing, refactoring",
+          "Writing technical documentation"
+        ],
+        "technologiesTitle": "Used Technologies",
+        "technologies": [
+          "Python/FastAPI for back-end",
+          "lxml, zipfile for configuration storage",
+          "JS/React for front-end"
+        ],
+        "achievementsTitle": "Achievements",
+        "achievements": [
+          "I realized an automatic build of the application using GitHub Actions workflows and Docker (for various OS and architectures)"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "imageSrc": "/img/arm.png",
+    "skillsList": [
+      "Python, Java, Go",
+      "HTML, CSS, JavaScript, React",
+      "SQL, PostgreSQL, Redis",
+      "FastAPI, Django, Flask, REST",
+      "And others: Selenium, Aiogram3, Zustand, Celery, Docker, Linux, Git, ReGex .."
+    ]
+  },
+  "welcome": {
+    "hi": "Hi, There!",
+    "name": "I'm DJAMAL GADJIIAVOV",
+    "whoami": "Back-end Developer"
+  },
+  "content": {
+    "title": "CV"
+  },
+  "footer": {
+    "location": {
+      "title": "Location",
+      "address": "Russia, Moscow"
+    },
+    "aroundTheWeb": {
+      "title": "Around the Web"
+    },
+    "email": {
+      "title": "Email",
+      "address": "gadjiiavov@dj.ama1.ru"
+    }
+  }
+}

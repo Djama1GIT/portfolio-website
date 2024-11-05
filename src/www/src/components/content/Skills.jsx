@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styles from './Skills.module.css';
 
@@ -8,20 +9,19 @@ import styles from './Skills.module.css';
  * @returns {JSX.Element} The JSX element representing the skills component.
  */
 function Skills() {
+  const { t, i18n } = useTranslation();
 
   return (
     <div id="skills" className={styles["skills-container"]}>
       <div>
-        <span className={styles.title}>Skills</span>
-        <img src="/img/arm.png" alt="" />
+        <span className={styles.title}>{t('skills.title')}</span>
+        <img src={t('skills.imageSrc')} alt="" />
       </div>
       <div className={styles.skills}>
         <ul>
-          <li>Python, Java, Go</li>
-          <li>HTML, CSS, JavaScript, React</li>
-          <li>SQL, PostgreSQL, Redis</li>
-          <li>FastAPI, Django, Flask, REST</li>
-          And others: Selenium, Aiogram3, Zustand, Celery, Docker, Linux, Git, ReGex ..
+          {t('skills.skillsList', { returnObjects: true }).map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
         </ul>
       </div>
     </div>

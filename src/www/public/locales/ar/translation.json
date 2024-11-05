@@ -1,0 +1,76 @@
+{
+  "welcome": {
+    "hi": "مرحبًا!",
+    "name": "أنا جمال الحاجي",
+    "whoami": "مطور خلفي"
+  },
+  "content": {
+    "title": "السيرة الذاتية"
+  },
+  "about": {
+    "title": "عن نفسي",
+    "text": "فهمت أنني أريد أن أكون مبرمجًا عندما كنت في الثانية عشرة من عمري، وأعتقد أن هذه هي حب مدى الحياة!) أنظر إلى بايثون (Python) في مجال البرمجة الخلفية بشغف، ولكنني دائمًا مستعد للعمل في أي مجال قريب أو دراسة شيء جديد.\n\nسأكون سعيدًا بأي تعارف!"
+  },
+  "education": {
+    "title": "التعليم",
+    "start": "2021",
+    "end": "2025",
+    "shortName": "MTUCI",
+    "universityName": "الجامعة التقنية لموسكو للاتصالات والمعلوماتية",
+    "faculty": "كلية «التقنيات المعلوماتية»",
+    "major": "التخصص «علوم الحاسوب والتقنيات الحاسوبية» (09.03.01)",
+    "specialization": "التخصص «أنظمة المعلومات التطبيقية»"
+  },
+  "experience": {
+    "title": "خبرة العمل",
+    "companies": [
+      {
+        "name": "شركة «أفم-إنيرغو» (أتمتة ومراقبة في قطاع الطاقة)",
+        "link": "https://www.avmenergo.ru/",
+        "image": "/img/station.png",
+        "period": "06.2024 — 10.2024",
+        "tasksTitle": "المهام",
+        "tasks": [
+          "تطوير مُكون المعدات الطاقية",
+          "ضمان تحسين الحمل على المعدات",
+          "دعم المنتج، إصلاح الأخطاء، إعادة الهيكلة",
+          "كتابة الوثائق الفنية"
+        ],
+        "technologiesTitle": "التقنيات المستخدمة",
+        "technologies": [
+          "Python/FastAPI للجزء الخلفي",
+          "lxml, zipfile لتخزين التكوين",
+          "JS/React للجزء الأمامي"
+        ],
+        "achievementsTitle": "الإنجازات",
+        "achievements": [
+          "كتبت بناءً تلقائيًا للتطبيق باستخدام GitHub Actions workflows و Docker (لأنظمة تشغيل وهياكل مختلفة)"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "المهارات",
+    "imageSrc": "/img/arm.png",
+    "skillsList": [
+      "Python, Java, Go",
+      "HTML, CSS, JavaScript, React",
+      "SQL, PostgreSQL, Redis",
+      "FastAPI, Django, Flask, REST",
+      "وراء أخرى: Selenium, Aiogram3, Zustand, Celery, Docker, Linux, Git, ReGex .."
+    ]
+  },
+  "footer": {
+    "location": {
+      "title": "الموقع",
+      "address": "روسيا، موسكو"
+    },
+    "aroundTheWeb": {
+      "title": "وسائل التواصل الاجتماعي"
+    },
+    "email": {
+      "title": "البريد",
+      "address": "gadjiiavov@dj.ama1.ru"
+    }
+  }
+}

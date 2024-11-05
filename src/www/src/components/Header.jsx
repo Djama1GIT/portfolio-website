@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
@@ -8,12 +9,24 @@ import styles from './Header.module.css';
  * @returns {JSX.Element} The JSX element representing the header component.
  */
 function Header() {
+  const { t, i18n } = useTranslation();
+  const locale = i18n.options.languages.indexOf(i18n.language);
+  const nextLocale = locale + 1 < i18n.options.languages.length ? locale + 1 : 0;
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <div id={styles.header}>
       <div className={styles["a-header"]}>
-        <a href="#gadjiiavov" class="nav-link">GADJIIAVOV</a>
-        <a href="/ru" className={styles["toggle-lang"]}>EN</a>
+        <a href="#gadjiiavov" className="nav-link">GADJIIAVOV</a>
+        <span
+          className={styles["toggle-lang"]}
+          onClick={() => changeLanguage(i18n.options.languages[nextLocale])}
+        >
+          {i18n.options.languages[locale].toUpperCase()}
+        </span>
       </div>
     </div>
   );
