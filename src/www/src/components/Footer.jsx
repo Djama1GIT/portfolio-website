@@ -10,28 +10,28 @@ import styles from './Footer.module.css';
 function Footer() {
 
   return (
-    <div id="footer">
-      <div class="location">
-        <h2>Location</h2>
-        <h1>Russia, Moscow</h1>
+    <div id="footer" className={styles.footer}>
+      <div className={styles.location}>
+        <p className={styles.title}>Location</p>
+        <p className={styles.address}>Russia, Moscow</p>
       </div>
-      <div class="around-the-web">
-        <h2>Around The Web</h2>
-        <a href="https://vk.com/gadjiiavov" class="vk">
+      <div className={styles["around-the-web"]}>
+        <p className={styles.title}>Around The Web</p>
+        <a href="https://vk.com/gadjiiavov" className={styles.vk}>
           <img src="/img/vk.png" alt="VK"/>
         </a>
-        <a href="https://t.me/gadjiiavov" class="tg">
+        <a href="https://t.me/gadjiiavov" className={styles.tg}>
           <img src="/img/tg.png" alt="Telegram"/>
         </a>
-        <a href="https://github.com/Djama1GIT" class="gh">
+        <a href="https://github.com/Djama1GIT" className={styles.gh}>
           <img src="/img/gh.png" alt="GitHub"/>
         </a>
       </div>
-      <div class="email">
-        <h2>Email</h2>
-        <h1>
+      <div className={styles.email}>
+        <p className={styles.title}>Email</p>
+        <p className={styles.address}>
           <a href="mailto:mail@dj.ama1.ru">gadjiiavov@dj.ama1.ru</a>
-        </h1>
+        </p>
       </div>
     </div>
   );

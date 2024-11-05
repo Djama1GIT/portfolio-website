@@ -1,0 +1,120 @@
+.about-container > * {
+    width: 100%;
+}
+.about {
+    font-size: 3em;
+    justify-content: right;
+    text-align: right;
+    padding: 0 4em;
+    flex-wrap: wrap;
+    white-space: pre-wrap;
+}
+.title {
+    font-size: 2.5vw;
+    margin: 0;
+}
+.about-container {
+    display: flex;
+    position: relative;
+    justify-content: right;
+    align-items: right;
+}
+.about-container img {
+    position: absolute;
+    top: 0;
+    left: 22%;
+    width: 23%;
+    transform: scaleX(-1);
+    filter: invert(80%);
+}
+@media (max-width: 4000px) {
+    .about {
+        font-size: 1.8vw;
+        padding: 0;
+        padding-right: 6vw;
+    }
+}
+@media (max-width: 3000px) {
+    .about {
+        font-size: 1.8vw;
+        padding: 0;
+        padding-right: 8vw;
+    }
+}
+@media (max-width: 1920px) {
+    .about {
+        font-size: 1.8vw;
+        padding: 0;
+        padding-right: 10vw;
+    }
+}
+@media (max-width: 1440px) {
+    .about {
+        font-size: 1.5vw;
+        justify-content: left;
+        flex-wrap: wrap;
+        padding: 0;
+        padding-right: 2vw;
+    }
+    .title {
+        font-size: 4vw;
+    }
+}
+@media (max-width: 1080px) and (max-height: 920px){
+    .about {
+        font-size: 1.5vw;
+        padding-left: 5vw;
+    }
+}
+@media (max-height: 768px) and (max-width: 360px){
+    .about {
+        font-size: 1.5vw;
+        padding-left: 5vw;
+    }
+    .about {
+        padding: 0;
+        padding-right: 2vw;
+        text-align: left;
+    }
+    .about-container {
+        display: block;
+        padding: 0;
+        padding-right: 2vw;
+    }
+    .about-container img {
+        display: none;
+    }
+}
+@media (max-width: 1440px) {
+    .about {
+        font-size: 1.8vw;
+        padding: 0 2vw;
+        text-align: left;
+    }
+    .about-container {
+        display: block;
+        padding: 0 10vw;
+    }
+    .about-container img  {
+        display: none;
+    }
+}
+@media (max-height: 920px) {
+    .about {
+        font-size: 1.8vw;
+        padding: 0;
+        padding-right: 6vw;
+    }
+}
+@media (max-width: 500px) {
+    .about {
+        font-size: 2.5vw;
+        padding: 0 4vw;
+    }
+    .about-container {
+        display: block;
+        padding: 0;
+        padding-right: 1vw;
+        margin-top: 1em;
+    }
+}

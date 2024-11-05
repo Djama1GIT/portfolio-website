@@ -10,10 +10,10 @@ import styles from './Header.module.css';
 function Header() {
 
   return (
-    <div id="header">
-      <div class="a-header">
+    <div id={styles.header}>
+      <div className={styles["a-header"]}>
         <a href="#gadjiiavov" class="nav-link">GADJIIAVOV</a>
-        <a href="/ru" class="toggle-lang">EN</a>
+        <a href="/ru" className={styles["toggle-lang"]}>EN</a>
       </div>
     </div>
   );

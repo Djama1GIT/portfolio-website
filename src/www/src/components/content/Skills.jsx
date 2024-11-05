@@ -10,12 +10,12 @@ import styles from './Skills.module.css';
 function Skills() {
 
   return (
-    <div id="skills">
+    <div id="skills" className={styles["skills-container"]}>
       <div>
-        <h1 class="title">Skills</h1>
+        <span className={styles.title}>Skills</span>
         <img src="/img/arm.png" alt="" />
       </div>
-      <div class="skills">
+      <div className={styles.skills}>
         <ul>
           <li>Python, Java, Go</li>
           <li>HTML, CSS, JavaScript, React</li>

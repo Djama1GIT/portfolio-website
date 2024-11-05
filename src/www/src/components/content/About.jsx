@@ -10,10 +10,10 @@ import styles from './About.module.css';
 function About() {
 
   return (
-    <div id="about">
-      <h1 class="title">About me</h1>
+    <div id="about" className={styles["about-container"]}>
+      <p className={styles.title}>About me</p>
       <img src="/img/man.png" alt="" />
-      <div class="about">
+      <div className={styles.about}>
         I realized I wanted to be a programmer at the age of 12,
         and I think this is a lifelong passion! With burning eyes,
         I gaze at Python back-end,
@@ -22,7 +22,7 @@ function About() {
         because deep inside I feel like a true engineer!
         <br />
         <br />
-        <div>I'd be happy about any acquaintances!</div>
+        I'd be happy about any acquaintances!
       </div>
     </div>
   );

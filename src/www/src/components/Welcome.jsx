@@ -12,13 +12,13 @@ function Welcome() {
   return (
     <>
       <div id="gadjiiavov"></div>
-      <div class="gadjiiavov">
-        <div class="some-about">
-          <span class="hi">Hi, There!</span><br />
-          <span class="name">I'm DJAMAL GADJIIAVOV</span>
-          <p class="whoami">Back-end Developer</p>
+      <div className={styles.gadjiiavov}>
+        <div className={styles["some-about"]}>
+          <span className={styles.hi}>Hi, There!</span><br />
+          <span className={styles.name}>I'm DJAMAL GADJIIAVOV</span>
+          <p className={styles.whoami}>Back-end Developer</p>
         </div>
-        <div class="me">
+        <div className={styles.me}>
           <img src="/img/avatar.png" alt="" />
         </div>
       </div>

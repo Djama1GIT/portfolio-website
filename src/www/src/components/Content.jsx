@@ -4,6 +4,7 @@ import styles from './Content.module.css';
 
 import About from './content/About';
 import Skills from './content/Skills';
+import Experience from './content/Experience';
 import Education from './content/Education';
 
 /**
@@ -14,12 +15,13 @@ import Education from './content/Education';
 function Content() {
 
   return (
-    <div class="cv">
-      <div class="over">
-        <span id="cv">CV</span>
+    <div className={styles.cv}>
+      <div className={styles.over}>
+        <span id="cv" className={styles["cv-title"]}>CV</span>
 
         <About />
         <Skills />
+        <Experience />
         <Education />
 
       </div>
