@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import styles from './Experience.module.css';
 
 /**
@@ -9,7 +8,7 @@ import styles from './Experience.module.css';
  * @returns {JSX.Element} The JSX element representing the experience component.
  */
 function Experience() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div id="experience" className={styles["experience-container"]}>

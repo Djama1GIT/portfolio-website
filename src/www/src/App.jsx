@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
+
 import Header from './components/Header';
 import Welcome from './components/Welcome';
 import Content from './components/Content';
@@ -7,11 +8,8 @@ import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
-    window.particlesJS.load('particles-js', 'particles.json', function() {
-      console.log('callback - particles.js config loaded');
-    });
+    window.particlesJS.load('particles-js', 'particles.json');
   }, []);
-
 
   return (
     <div className="App">

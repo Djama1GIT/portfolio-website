@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 /**
@@ -9,7 +8,7 @@ import styles from './Header.module.css';
  * @returns {JSX.Element} The JSX element representing the header component.
  */
 function Header() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const locale = i18n.options.languages.indexOf(i18n.language);
   const nextLocale = locale + 1 < i18n.options.languages.length ? locale + 1 : 0;
 
