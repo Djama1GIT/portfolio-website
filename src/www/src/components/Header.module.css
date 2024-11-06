@@ -10,11 +10,15 @@
     z-index: 1000;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
+.gadjiiavov {
+    cursor: pointer;
+}
 .a-header {
     display: inline-flex;
     position: absolute;
     top: 1.8vh;
     left: 1.2vw;
+    user-select: none;
 }
 .toggle-lang {
     margin-top: 1em;

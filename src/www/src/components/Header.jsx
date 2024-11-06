@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Header.module.css';
+import { smoothScroll } from '../utils';
 
 /**
  * The header component. This component is used to display the header block.
@@ -16,14 +17,22 @@ function Header() {
     i18n.changeLanguage(lng);
   };
 
+  const scrollToTop = () => {
+    if (window.scrollY < 10) return;
+    smoothScroll(`#${CSS.escape(styles.header)}`, 1337);
+  };
+
+  const switchLanguage = () => {
+    changeLanguage(i18n.options.languages[nextLocale])
+  };
+
   return (
     <div id={styles.header}>
       <div className={styles["a-header"]}>
-        <a href="#gadjiiavov" className="nav-link">GADJIIAVOV</a>
-        <span
-          className={styles["toggle-lang"]}
-          onClick={() => changeLanguage(i18n.options.languages[nextLocale])}
-        >
+        <p className={`nav-link ${styles.gadjiiavov}`} onClick={scrollToTop}>
+          GADJIIAVOV
+        </p>
+        <span className={styles["toggle-lang"]} onClick={switchLanguage} >
           {i18n.options.languages[locale].toUpperCase()}
         </span>
       </div>
