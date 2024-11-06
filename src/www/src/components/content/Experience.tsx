@@ -1,24 +1,38 @@
 import React from 'react';
+import '../../i18n/config';
 import { useTranslation } from 'react-i18next';
-import styles from './Experience.module.css';
+import styles from './Experience.module.scss';
 
-/**
- * The experience component. This component is used to display the experience block.
- *
- * @returns {JSX.Element} The JSX element representing the experience component.
- */
-function Experience() {
+interface ExperienceProps {
+
+}
+
+interface Company {
+  image: string;
+  name: string;
+  period: string;
+  tasksTitle: string;
+  tasks: string[];
+  technologiesTitle: string;
+  technologies: string[];
+  achievementsTitle: string;
+  achievements: string[];
+}
+
+const Experience: React.FC<ExperienceProps> = () => {
   const { t } = useTranslation();
+
+  const companies: Company[] = t('experience.companies', { returnObjects: true });
 
   return (
     <div id="experience" className={styles["experience-container"]}>
       <p className={styles.title}>{t('experience.title')}</p>
       <div className={styles.experience}>
-        {t('experience.companies', { returnObjects: true }).map((company) => (
+        {companies.map((company: Company) => (
           <div className={styles.company}>
             <img src={company.image} alt="" />
             <p className={styles["company-name"]}>{company.name}</p>
-            <p className={styles.period}>{company.period}</p>{/* TODO: CSS */}
+            <p className={styles.period}>{company.period}</p>
             <p className={styles.subtitle}>{company.tasksTitle}:</p>
             <ul>
               {company.tasks.map((task) => (

@@ -1,20 +1,19 @@
 import React from 'react';
+import '../i18n/config';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
-import styles from './Content.module.css';
+import styles from './Content.module.scss';
 
 import About from './content/About';
 import Skills from './content/Skills';
 import Experience from './content/Experience';
 import Education from './content/Education';
 
-/**
- * The content body component. This component is used to display the content block.
- *
- * @returns {JSX.Element} The JSX element representing the content body component.
- */
-function Content() {
-  const { t, i18n } = useTranslation();
+interface ContentProps {
+
+}
+
+const Content: React.FC<ContentProps> = () => {
+  const { t } = useTranslation();
 
   return (
     <div className={styles.cv}>
@@ -29,6 +28,6 @@ function Content() {
       </div>
     </div>
   );
-}
+};
 
 export default React.memo(Content);

@@ -1,14 +1,16 @@
 import React from 'react';
+import '../../i18n/config';
 import { useTranslation } from 'react-i18next';
-import styles from './Skills.module.css';
+import styles from './Skills.module.scss';
 
-/**
- * The skills component. This component is used to display the skills block.
- *
- * @returns {JSX.Element} The JSX element representing the skills component.
- */
-function Skills() {
+interface SkillsProps {
+
+}
+
+const Skills: React.FC<SkillsProps> = () => {
   const { t } = useTranslation();
+
+  const skills: string[] = t('skills.skillsList', { returnObjects: true });
 
   return (
     <div id="skills" className={styles["skills-container"]}>
@@ -18,9 +20,9 @@ function Skills() {
       </div>
       <div className={styles.skills}>
         <ul>
-          {t('skills.skillsList', { returnObjects: true }).map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
+          {skills.map((skill: string, index: number) => (
+              <li key={index}>{skill}</li>
+            ))}
         </ul>
       </div>
     </div>

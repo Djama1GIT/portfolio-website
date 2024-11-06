@@ -1,15 +1,16 @@
 import React from 'react';
+import '../../i18n/config';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
-import styles from './Education.module.css';
+import styles from './Education.module.scss';
 
-/**
- * The education component. This component is used to display the about block.
- *
- * @returns {JSX.Element} The JSX element representing the education component.
- */
-function Education() {
-  const { t, i18n } = useTranslation();
+interface EducationProps {
+
+}
+
+const Education: React.FC<EducationProps> = () => {
+  const { t } = useTranslation();
+
+  const end: string = t('education.end');
 
   return (
     <div id="education" className={styles["education-container"]}>
@@ -19,7 +20,7 @@ function Education() {
         <div className={styles.mtuci}>
           <div>
             <div>
-              <p className={styles.title}>{t('education.shortName')}'{t('education.end').slice(-2)}</p>
+              <p className={styles.title}>{`${t('education.shortName')}'${end.slice(-2)}`}</p>
               <div>{t('education.universityName')}</div>
               <div>{t('education.start')} — {t('education.end')}</div>
               <br />

@@ -6,6 +6,13 @@ import Welcome from './components/Welcome';
 import Content from './components/Content';
 import Footer from './components/Footer';
 
+// Declare the particlesJS interface
+declare global {
+  interface Window {
+    particlesJS: any;
+  }
+}
+
 function App() {
   useEffect(() => {
     window.particlesJS.load('particles-js', 'particles.json');
