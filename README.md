@@ -25,7 +25,8 @@ After starting the project, you can access the user interface at: http://localho
 
 ## Technologies Used
 
-- React - The library for web and native user interfaces. 
+- React - The library used for web and native user interfaces.
+- TypeScript - The programming language used for adding static typing with optional type annotations to JavaScript.
 - JavaScript - The programming language used for adding interactivity to the web pages. 
 - HTML - The markup language used for creating the structure of web pages.
 - CSS - The stylesheet language used for styling the web pages.

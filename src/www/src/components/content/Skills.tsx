@@ -21,8 +21,8 @@ const Skills: React.FC<SkillsProps> = () => {
       <div className={styles.skills}>
         <ul>
           {skills.map((skill: string, index: number) => (
-              <li key={index}>{skill}</li>
-            ))}
+            <li key={index}>{skill}</li>
+          ))}
         </ul>
       </div>
     </div>

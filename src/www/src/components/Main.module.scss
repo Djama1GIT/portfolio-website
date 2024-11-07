@@ -1,0 +1,13 @@
+@import '../mixins';
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 80%;
+    max-width: 1920px;
+  }
+}

@@ -1,38 +1,46 @@
+@import '../mixins';
+
 #header {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 0.75em;
-    height: 3em;
-    font-size: 32px;
-    font-weight: 600;
-    z-index: 1000;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-}
-.gadjiiavov {
-    cursor: pointer;
-}
-.a-header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 0.75em;
+  height: 3em;
+  font-size: 32px;
+  font-weight: 600;
+  z-index: 1000;
+  text-shadow: 0 0 15px var(--header-shadow-color);
+
+
+  @include respond-to('small-or-wide') {
+    display: none;
+  }
+
+  .a-header {
     display: inline-flex;
     position: absolute;
     top: 1.8vh;
     left: 1.2vw;
     user-select: none;
-}
-.toggle-lang {
-    margin-top: 0.5em;
-    margin-left: 0.25em;
-    font-size: 15px;
-    cursor: pointer;
-}
-@media (max-height: 500px) {
-    #header {
-        display: none;
+
+    @include respond-to('largest') {
+      left: calc(50vw - 1280px);
     }
-}
-@media (max-width: 1440px) {
-    #header {
-        display: none;
+
+    @include respond-to('large') {
+      left: 1.2vw;
     }
+
+    .gadjiiavov {
+      cursor: pointer;
+    }
+
+    .toggle-lang {
+      margin-top: 0.5em;
+      margin-left: 0.25em;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  }
 }

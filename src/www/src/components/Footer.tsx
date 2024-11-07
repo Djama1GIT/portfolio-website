@@ -18,22 +18,24 @@ const Footer: React.FC<FooterProps> = () => {
       </div>
       <div className={styles['around-the-web']}>
         <p className={styles.title}>{t('footer.aroundTheWeb.title')}</p>
-        <a href="https://vk.com/gadjiiavov" className={styles.vk}>
-          <img src="/img/vk.png" alt="VK" />
-        </a>
-        <a href="https://t.me/gadjiiavov" className={styles.tg}>
-          <img src="/img/tg.png" alt="Telegram" />
-        </a>
-        <a href="https://github.com/Djama1GIT" className={styles.gh}>
-          <img src="/img/gh.png" alt="GitHub" />
-        </a>
+          <div className={styles.links}>
+            <a href="https://vk.com/gadjiiavov" className={styles.link}>
+              <img src="/img/vk.png" alt="VK"/>
+            </a>
+            <a href="https://t.me/gadjiiavov" className={styles.link}>
+              <img src="/img/tg.png" alt="Telegram"/>
+            </a>
+            <a href="https://github.com/Djama1GIT" className={styles.link}>
+              <img src="/img/gh.png" alt="GitHub"/>
+            </a>
+          </div>
       </div>
-      <div className={styles.email}>
-        <p className={styles.title}>{t('footer.email.title')}</p>
-        <p className={styles.address}>
-          <a href="mailto:mail@dj.ama1.ru">{t('footer.email.address')}</a>
-        </p>
-      </div>
+        <div className={styles.email}>
+            <p className={styles.title}>{t('footer.email.title')}</p>
+            <p className={styles.address}>
+                <a href="mailto:mail@dj.ama1.ru">{t('footer.email.address')}</a>
+            </p>
+        </div>
     </div>
   );
 };

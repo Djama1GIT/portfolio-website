@@ -1,156 +1,86 @@
+@import '../../mixins';
+
 .education-container {
-    margin-top: 30vh;
-    min-height: 30vh;
-    display: flex;
-    position: relative;
-    justify-content: left;
-    align-items: left;
-    flex-direction: row-reverse;
-}
-.education-container img {
+  font-size: 0.8em;
+  display: flex;
+  position: relative;
+  justify-content: left;
+  flex-direction: row-reverse;
+
+  @include respond-to('medium') {
+    display: block;
+    font-size: 1em;
+
+    .education {
+      text-align: left;
+
+      .school {
+        text-align: left;
+      }
+    }
+  }
+
+  @include respond-to('tiny-and-tall') {
+    display: block;
+  }
+
+  @include respond-to('small') {
+    display: block;
+    font-size: 0.5em;
+  }
+
+  @include respond-to('tiny') {
+    font-size: 0.3em;
+  }
+
+  .title {
+    font-size: 3em;
+    margin: 0;
+    width: 30%;
+
+    @include respond-to('medium') {
+      width: 100%;
+    }
+  }
+
+  img {
     position: absolute;
     top: 5%;
-    right: 25%;
-    width: 15%;
+    right: 10%;
+    width: 30em;
     transform: scaleX(-1);
     filter: invert(80%);
-}
-.education-container > * {
-    width: 100%;
-}
-.title {
-    font-size: 2.5vw;
-    margin: 0;
-}
-.university {
-    font-size: 6em;
+
+    @include respond-to('medium') {
+      display: none;
+    }
+  }
+
+  .education {
+    font-size: 2.2em;
     justify-content: left;
+    padding-bottom: 2em;
     text-align: left;
-    padding: 0 2em;
     flex-wrap: wrap;
-}
-.mtuci {
-    text-align: left;
-    width: 100%;
-    font-size: 0.5em;
-    white-space: pre-wrap;
-}
-@media (max-width: 4000px) {
-    .university {
-        font-size: 1.8vw;
-        padding: 0 0 0 6vw;
+    width: 70%;
+
+    @include respond-to('medium') {
+      width: 100%;
     }
-    .mtuci {
-        text-align: left;
-        font-size: 1.5vw;
+
+    .school {
+      text-align: left;
+      width: 100%;
+      white-space: pre-wrap;
+
+      &-title {
+        font-size: 2em;
+
+        @include respond-to('small') {
+          font-size: 1.5em;
+          margin: 0;
+        }
+      }
     }
-    .education-container {
-        margin-top: 3vh!important;
-        min-height: unset;
-    }
-}
-@media (max-width: 3000px) {
-    .university {
-        font-size: 1.8vw;
-        padding: 0 0 0 8vw;
-    }
-    .mtuci {
-        text-align: left;
-        font-size: 1.5vw;
-    }
-}
-@media (max-width: 1920px) {
-    .university {
-        font-size: 1.8vw;
-        padding: 0;
-        padding-left: 8vw;
-    }
-    .mtuci {
-        text-align: left;
-        font-size: 1.8vw;
-        padding: 0;
-        padding-left: 2vw;
-    }
-}
-@media (max-width: 1440px) {
-    .university {
-        font-size: 1.5vw;
-        justify-content: left;
-        flex-wrap: wrap;
-        padding: 0;
-        padding-left: 2vw;
-    }
-    .education-container img {
-        right: 25%;
-        width: 15%;
-    }
-   .title {
-        font-size: 4vw;
-    }
-}
-@media (max-width: 1080px) and (max-height: 920px) {
-    .university {
-        font-size: 1.5vw;
-        padding-left: 5em;
-    }
-}
-@media (max-height: 768px) and (max-width: 360px) {
-    .university {
-        font-size: 1.5vw;
-        padding: 0;
-        padding-left: 5vw;
-        text-align: left;
-    }
-    .mtuci {
-        text-align: left;
-    }
-    .education-container {
-        display: block;
-        padding: 0;
-        padding-left: 2vw;
-    }
-    .education-container img {
-        display: none;
-    }
-}
-@media (max-width: 1440px) {
-    .university {
-        font-size: 1.5vw;
-        padding: 0 10vw;
-        text-align: left;
-    }
-    .mtuci {
-        text-align: left;
-    }
-    .education-container {
-        display: block;
-        padding: 0vw;
-        margin-top: 0!important;
-    }
-    .education-container img {
-        display: none;
-    }
-}
-@media (max-height: 920px) {
-    .university {
-        font-size: 1.8vw;
-        padding: 0 8vw;
-    }
-    .mtuci {
-        padding: 0 2vw;
-        font-size: 1.8vw;
-    }
-}
-@media (max-width: 500px) {
-    .university {
-        font-size: 2.5vw;
-        padding: 0 2vw;
-    }
-    .mtuci {
-        font-size: 2.5vw;
-    }
-    .education-container {
-        display: block;
-        padding: 0;
-    }
+  }
 }

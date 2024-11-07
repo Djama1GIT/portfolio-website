@@ -16,11 +16,11 @@ const Education: React.FC<EducationProps> = () => {
     <div id="education" className={styles["education-container"]}>
       <span className={styles.title}>{t('education.title')}</span>
       <img src="/img/graduation.png" alt="" />
-      <div className={styles.university}>
-        <div className={styles.mtuci}>
+      <div className={styles.education}>
+        <div className={styles.school}>
           <div>
             <div>
-              <p className={styles.title}>{`${t('education.shortName')}'${end.slice(-2)}`}</p>
+              <p className={styles["school-title"]}>{`${t('education.shortName')}'${end.slice(-2)}`}</p>
               <div>{t('education.universityName')}</div>
               <div>{t('education.start')} — {t('education.end')}</div>
               <br />
