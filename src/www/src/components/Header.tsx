@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = () => {
     : [];
 
   const locale = resources.indexOf(i18n.language);
-  const nextLocale = locale + 1 < resources.length ? locale + 1 : 0;  // fixme
+  const nextLocale = locale + 1 < resources.length ? locale + 1 : 0;
 
 
   const changeLanguage = (lng: string) => {
